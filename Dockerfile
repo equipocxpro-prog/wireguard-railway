@@ -4,4 +4,5 @@ RUN apt-get update && apt-get install -y wireguard iproute2 iptables curl && apt
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 EXPOSE 51820/udp
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["sh", "/entrypoint.sh"]
+
